@@ -69,11 +69,15 @@ public class Start extends JPanel implements ActionListener{
 		if (e.getSource() == b1) {
     		//検索画面に移動する
             frame.PanelChange((JPanel)this,frame.PanelNames[1],b1.getText());
+            frame.getTitle(b1.getText());
+
     	}else if(e.getSource()==b2) {
     		 frame.PanelChange((JPanel)this,frame.PanelNames[1],b2.getText());
+    		 frame.getTitle(b2.getText());
 
     	}else if( e.getSource() == b3) {
     		 frame.PanelChange((JPanel)this,frame.PanelNames[1],b3.getText());
+    		 frame.getTitle(b3.getText());
 
     	}
     	else if(e.getSource()==exit) {

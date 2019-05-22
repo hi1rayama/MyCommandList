@@ -17,6 +17,8 @@ public class Main  extends JFrame {//フレーム（ウィンドウ）を作成�
 	NameChange namechange = new NameChange(this, PanelNames[3]);
 	Search search = new Search(this, PanelNames[4]);
 	Edit edit = new Edit(this, PanelNames[5]);
+	public String title;
+
 
 	public Main() {//全てのウィンドウを追加し、非表示にする
 
@@ -34,6 +36,10 @@ public class Main  extends JFrame {//フレーム（ウィンドウ）を作成�
 		edit.setVisible(false);
 	}
 
+	public void getTitle(String title) {
+this.title=title;
+	}
+
 	public void PanelChange(JPanel jp, String str, String title) {
 		//パネルチェンジの処理をする。
 
@@ -46,6 +52,7 @@ public class Main  extends JFrame {//フレーム（ウィンドウ）を作成�
 
 //パネルを非表示にする
 		if (name ==PanelNames[1]) {
+
 			home = (Home) jp;
 			home.setVisible(false);
 		}

@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 public class NameChange extends JPanel implements ActionListener{
 
 
-	public NameChange(Main m, String s) {//ホーム名変更画面の作成
+	public NameChange(Main m, String p_name) {//ホーム名変更画面の作成
 
 	}
 
