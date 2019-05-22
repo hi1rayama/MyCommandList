@@ -3,7 +3,6 @@
  */
 package frame;
 
-import java.awt.Frame;
 /**
  * @author hirayamakai
  *
@@ -15,7 +14,7 @@ import javax.swing.JPanel;
 public class Search extends JPanel implements ActionListener{
 
 
-	public Search(Frame m, String s) {//スタート画面の作成
+	public Search(Main m, String s) {//スタート画面の作成
 
 	}
 

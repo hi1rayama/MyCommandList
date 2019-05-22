@@ -3,7 +3,6 @@
  */
 package frame;
 
-import java.awt.Frame;
 /**
  * @author hirayamakai
  *
@@ -15,7 +14,7 @@ import javax.swing.JPanel;
 public class Register extends JPanel implements ActionListener{
 
 
-	public Register(Frame m, String s) {//スタート画面の作成
+	public Register(Main m, String s) {//スタート画面の作成
 
 	}
 

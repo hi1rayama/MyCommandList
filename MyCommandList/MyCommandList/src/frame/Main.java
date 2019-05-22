@@ -8,6 +8,7 @@ package frame;
  *
  */
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 public class Main  extends JFrame {//フレーム（ウィンドウ）を作成するためのクラス
 	public String[] PanelNames = { "start", "home", "register" ,"namechange","search","edit"};//パネル名の配列
 	Start start = new Start(this, PanelNames[0]);
@@ -33,9 +34,75 @@ public class Main  extends JFrame {//フレーム（ウィンドウ）を作成�
 		edit.setVisible(false);
 	}
 
+	public void PanelChange(JPanel jp, String str, String title) {
+		//パネルチェンジの処理をする。
+
+		this.setTitle(title);
+		String name = jp.getName();
+		if (name == PanelNames[0]) {
+			start = (Start) jp;
+			start.setVisible(false);
+		}
+
+//パネルを非表示にする
+		if (name ==PanelNames[1]) {
+			home = (Home) jp;
+			home.setVisible(false);
+		}
 
 
+		if (name == PanelNames[2]) {
 
+			register = (Register) jp;
+			register.setVisible(false);
+		}
+
+		if (name == PanelNames[3]) {
+
+			namechange = (NameChange) jp;
+			namechange.setVisible(false);
+		}
+
+		if (name == PanelNames[4]) {
+
+			search = (Search) jp;
+			search.setVisible(false);
+		}
+
+		if (name == PanelNames[5]) {
+
+			edit = (Edit) jp;
+			edit.setVisible(false);
+		}
+
+
+//次のパネルを表示する
+
+		if (str == PanelNames[0]) {
+			start.setVisible(true);
+		}
+
+		if (str == PanelNames[1]) {
+			home.setVisible(true);
+		}
+
+		if (str == PanelNames[2]) {
+			register.setVisible(true);
+		}
+
+		if (str == PanelNames[3]) {
+			namechange.setVisible(true);
+		}
+
+		if (str == PanelNames[4]) {
+			search.setVisible(true);
+		}
+
+		if (str == PanelNames[5]) {
+			edit.setVisible(true);
+		}
+
+	}
 	/**
 	 * @param args
 	 */
@@ -46,11 +113,12 @@ public class Main  extends JFrame {//フレーム（ウィンドウ）を作成�
 
 		Main mf = new Main();
 		mf.setTitle("Start");
-		mf.setBounds(10, 10, 600, 300);
+		mf.setBounds(10, 10, 800, 400);
 		mf.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		mf.start.setVisible(true);
 		mf.setVisible(true);
 
 	}
+
 
 }

@@ -3,7 +3,6 @@
  */
 package frame;
 
-import java.awt.Frame;
 /**
  * @author hirayamakai
  *
@@ -15,7 +14,7 @@ import javax.swing.JPanel;
 public class NameChange extends JPanel implements ActionListener{
 
 
-	public NameChange(Frame m, String s) {//ホーム名変更画面の作成
+	public NameChange(Main m, String s) {//ホーム名変更画面の作成
 
 	}
 

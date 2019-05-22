@@ -3,7 +3,6 @@
  */
 package frame;
 
-import java.awt.Frame;
 /**
  * @author hirayamakai
  *
@@ -15,7 +14,7 @@ import javax.swing.JPanel;
 public class Home extends JPanel implements ActionListener{
 
 
-	public Home(Frame m, String s) {//ホーム画面の作成
+	public Home(Main m, String s) {//ホーム画面の作成
 
 	}
 

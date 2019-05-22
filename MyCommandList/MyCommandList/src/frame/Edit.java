@@ -3,7 +3,6 @@
  */
 package frame;
 
-import java.awt.Frame;
 /**
  * @author hirayamakai
  *
@@ -15,7 +14,7 @@ import javax.swing.JPanel;
 public class Edit extends JPanel implements ActionListener{
 
 
-	public Edit(Frame m, String s) {//コマンド編集画面の作成
+	public Edit(Main m, String s) {//コマンド編集画面の作成
 
 	}
 
