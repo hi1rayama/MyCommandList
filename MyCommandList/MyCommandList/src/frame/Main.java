@@ -119,7 +119,7 @@ this.title=title;
 
 
 		Main mf = new Main();
-		mf.setTitle("Start");
+		mf.setTitle("START");
 		mf.setBounds(10, 10, 800, 400);
 		mf.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		mf.start.setVisible(true);
