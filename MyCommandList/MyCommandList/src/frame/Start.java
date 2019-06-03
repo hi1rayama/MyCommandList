@@ -15,7 +15,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 public class Start extends JPanel implements ActionListener{
-   private JButton b1,b2,b3,exit,reset;
+   public JButton b1,b2,b3,exit,reset;
 	private JLabel start_title;
     public Main frame;
     String str;
@@ -32,14 +32,14 @@ public class Start extends JPanel implements ActionListener{
 		start_title.setBounds(250, 20, 400, 100);
 		start_title.setFont(new Font("ＭＳ ゴシック", Font.BOLD, 32));
 
-
-        b1 = new JButton("1");
+processing.NameChange.Name();
+        b1 = new JButton(processing.NameChange.name[0]);
         b1.setBounds(40, 150, 200, 60);
 
-        b2 = new JButton("2");
+        b2 = new JButton(processing.NameChange.name[1]);
         b2.setBounds(300, 150, 200, 60);
 
-        b3 = new JButton("3");
+        b3 = new JButton(processing.NameChange.name[2]);
         b3.setBounds(560, 150, 200, 60);
 
         exit = new JButton("終了");
@@ -69,15 +69,19 @@ public class Start extends JPanel implements ActionListener{
 		if (e.getSource() == b1) {
     		//検索画面に移動する
             frame.PanelChange((JPanel)this,frame.PanelNames[1],b1.getText());
-            frame.getTitle(b1.getText());
+            frame.setTitle(b1.getText());
+            frame.setNo("1");
+
 
     	}else if(e.getSource()==b2) {
     		 frame.PanelChange((JPanel)this,frame.PanelNames[1],b2.getText());
-    		 frame.getTitle(b2.getText());
+    		 frame.setTitle(b2.getText());
+             frame.setNo("2");
 
     	}else if( e.getSource() == b3) {
     		 frame.PanelChange((JPanel)this,frame.PanelNames[1],b3.getText());
-    		 frame.getTitle(b3.getText());
+    		 frame.setTitle(b3.getText());
+             frame.setNo("3");
 
     	}
     	else if(e.getSource()==exit) {

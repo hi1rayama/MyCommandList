@@ -68,9 +68,8 @@ public class Register extends JPanel implements ActionListener{
 	public void actionPerformed(ActionEvent e) {//ボタンが押された時の処理など
 
 		if (e.getSource() == register_b) {
-			/*
-			 * 登録処理のメソッドを入れる
-			 */
+		processing.Register.write(text1.getText(), text2.getText(), frame.getNo());
+
 		}else if(e.getSource()==return_b) {
 			frame.PanelChange((JPanel)this,frame.PanelNames[1],frame.title);
 		}

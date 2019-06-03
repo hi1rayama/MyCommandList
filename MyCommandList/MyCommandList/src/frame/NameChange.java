@@ -31,7 +31,7 @@ public class NameChange extends JPanel implements ActionListener{
 		namechange_l.setBounds(150, 100, 100, 20);
 		namechange_l.setFont(new Font("ＭＳ ゴシック", Font.PLAIN, 14));
 
-		text1 = new JTextField(null);
+		text1 = new JTextField(null); //現在の名称を入れておく
 		text1.setBounds(250, 100, 200, 20);
 
 		namechange_b = new JButton("名称変更");
@@ -60,6 +60,10 @@ public class NameChange extends JPanel implements ActionListener{
 			/*
 			 * 名前変更処理のメソッドを入れる
 			 */
+			processing.NameChange.change(text1.getText(),"1");
+			frame.setTitle(text1.getText());
+			frame.start.b1.setText(text1.getText());
+
 		}else if(e.getSource()==return_b) {
 			frame.PanelChange((JPanel)this,frame.PanelNames[1],frame.title);
 		}
