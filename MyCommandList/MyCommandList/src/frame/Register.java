@@ -68,12 +68,20 @@ public class Register extends JPanel implements ActionListener{
 	public void actionPerformed(ActionEvent e) {//ボタンが押された時の処理など
 
 		if (e.getSource() == register_b) {
-		processing.Register.write(text1.getText(), text2.getText(), frame.getNo());
+			processing.Register.write(text1.getText(), text2.getText(), frame.getNo());
+			setNull();
 
-		}else if(e.getSource()==return_b) {
-			frame.PanelChange((JPanel)this,frame.PanelNames[1],frame.title);
+		} else if (e.getSource() == return_b) {
+			frame.PanelChange((JPanel) this, frame.PanelNames[1], frame.title);
+			setNull();
 		}
 
+	}
+
+	public void setNull() {
+		//それぞれのテキストの値を空白にする
+		text1.setText("");
+		text2.setText("");
 
 
 	}
